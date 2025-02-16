@@ -1,0 +1,13 @@
+config:
+  target: 'http://127.0.0.1:8000'  # Replace with your app's URL
+  phases:
+    - duration: 100  # Duration of the test in seconds
+      arrivalRate: 1  # Number of new virtual users per second
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/user/login"  # Replace with your login endpoint
+          json:
+            email: "enas@gmail.com"  # Replace with a valid username
+            password: "123456789"  # Replace with a valid password

@@ -1,0 +1,2 @@
+artillery run --output report.json load-test-login.yml
+
